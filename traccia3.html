@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+</head>
+<body >
+    
+
+    <p id="paragrafo1" style="font-size: 100px; ">Paragrafo numero 1.</p>
+    <button onclick="cambiaColore('paragrafo1')" style="font-size: 80px;border-radius: 20px;">Cambia colore</button>
+
+    <p id="paragrafo2" style="font-size: 100px;">Paragrafo numero 2.</p>
+    <button onclick="grassetto('paragrafo2')" style="font-size: 80px;border-radius: 20px;">Cambia testo</button>
+
+    <p id="paragrafo3" style="font-size: 100px;">Paragrafo numero 3.</p>
+    <button onclick="visibilita('paragrafo3')" style="font-size: 80px; border-radius: 20px;">Cambia visibilità</button>
+
+    <script>
+           function cambiaColore() {
+            document.getElementById("paragrafo1").style.color= ('#' + Math.floor(Math.random() * 246))
+            document.getElementById("paragrafo2").style.color= ('#' + Math.floor(Math.random() * 246))
+            document.getElementById("paragrafo3").style.color= ('#' + Math.floor(Math.random() * 246))
+        }
+        function grassetto() {
+            document.getElementById("paragrafo1").style.fontWeight= "bold";
+            document.getElementById("paragrafo2").style.fontWeight= "bold";
+            document.getElementById("paragrafo3").style.fontWeight= "bold";
+
+        }
+        function visibilita() {
+            document.getElementById("paragrafo1").style.display= "none";
+            document.getElementById("paragrafo2").style.display= "none";
+            document.getElementById("paragrafo3").style.display= "none";
+            setTimeout(() => {
+                document.getElementById("paragrafo1").style.display= "block";
+                document.getElementById("paragrafo2").style.display= "block";
+                document.getElementById("paragrafo3").style.display= "block";
+            },500);
+
+
+
+        }
+
+    </script>
+
+
+    
+</body>
+</html>
